@@ -1,5 +1,6 @@
 const mysql = require('mysql')
 const dotenv = require('dotenv')
+const { VARCHAR } = require('mysql/lib/protocol/constants/types')
 
 dotenv.config()
 
@@ -11,3 +12,4 @@ const db = mysql.createConnection({
 })
 
 module.exports = db
+
