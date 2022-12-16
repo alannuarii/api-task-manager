@@ -11,5 +11,3 @@ const db = mysql.createConnection({
 })
 
 module.exports = db
-
-console.log(db.config.host)
