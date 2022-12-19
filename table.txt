@@ -18,6 +18,6 @@ CREATE TABLE task
     executor VARCHAR(30) NOT NULL,
     disposition VARCHAR(30),
     user_id INT NOT NULL,
-    PRIMARY KEY (id_task)
+    PRIMARY KEY (id_task),
     CONSTRAINT fk_task_user FOREIGN KEY (user_id) REFERENCES user (id_user)
 )
