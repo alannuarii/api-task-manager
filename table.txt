@@ -8,6 +8,12 @@ CREATE TABLE user
     PRIMARY KEY (id_user)
 )
 
+CREATE TABLE data_login
+(
+    id_login INT NOT NULL AUTO_INCREMENT,
+    
+)
+
 CREATE TABLE task
 (
     id_task INT NOT NULL,

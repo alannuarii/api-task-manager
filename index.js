@@ -4,11 +4,10 @@ const port = 3000;
 const bodyParser = require("body-parser");
 const router = require("./routes/router");
 
-
 // Parsing Body
 app.use(bodyParser.json());
 
-// Main Route 
+// Main Route
 app.use("/", router);
 
 // Running Port
