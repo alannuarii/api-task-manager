@@ -69,4 +69,8 @@ const login = (req, res) => {
   });
 };
 
-module.exports = { getUser, login, register };
+const logout = (req, res) => {
+  res.header("auth-token", null);
+};
+
+module.exports = { getUser, login, register, logout };

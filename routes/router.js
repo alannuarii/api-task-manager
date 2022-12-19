@@ -8,5 +8,6 @@ router.get("/", verification, sample.main);
 router.get("/user", auth.getUser);
 router.post("/login", auth.login);
 router.post("/register", auth.register);
+router.delete("/register", auth.logout);
 
 module.exports = router;

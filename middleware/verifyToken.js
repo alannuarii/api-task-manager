@@ -5,7 +5,7 @@ const verification = (req, res, next) => {
   const token = req.header("auth-token");
   try {
     decoded = jwt.verify(token, env.secretKey);
-    if (decoded.division != "Operasi")
+    if (decoded.division != "K3L dan Kam")
       return res.status(401).json({
         message: "No access for you",
       });
