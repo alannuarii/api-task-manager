@@ -44,7 +44,6 @@ const login = (req, res) => {
       });
       return;
     }
-    console.log(result);
     const checkPassword = await authUtils.checkPassword(password, result[0].password);
     if (checkPassword) {
       const token = jwt.sign(
@@ -58,6 +57,7 @@ const login = (req, res) => {
         { expiresIn: "1h" }
       );
       res.header("auth-token", token);
+      console.log(res.header("auth-token"));
       res.status(200).json({
         message: "Login successfully",
       });
