@@ -56,8 +56,8 @@ const login = (req, res) => {
         env.secretKey,
         { expiresIn: "1h" }
       );
-      res.header("auth-token", token);
-      console.log(res.header("auth-token"));
+      res.header("x-access-token", token);
+      console.log(res.header("x-access-token"));
       res.status(200).json({
         message: "Login successfully",
       });

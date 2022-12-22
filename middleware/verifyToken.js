@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const env = require("../utils/env");
 
 const verification = (req, res, next) => {
-  const token = req.header("auth-token");
+  const token = req.header("x-access-token");
   try {
     decoded = jwt.verify(token, env.secretKey);
     if (decoded.division != "K3L dan Kam")
