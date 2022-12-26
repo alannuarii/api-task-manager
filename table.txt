@@ -5,6 +5,8 @@ CREATE TABLE user
     email VARCHAR(30) NOT NULL,
     password VARCHAR(200) NOT NULL,
     divition VARCHAR(30) NOT NULL,
+    position VARCHAR(30) NOT NULL,
+    kode_task VARCHAR(5) NOT NULL,
     PRIMARY KEY (id_user)
 )
 

@@ -3,21 +3,6 @@ const authUtils = require("../utils/authUtils");
 const jwt = require("jsonwebtoken");
 const env = require("../utils/env");
 
-const getUser = (req, res) => {
-  const sql = `SELECT * FROM user`;
-  db.query(sql, (error, result) => {
-    if (error) {
-      res.status(400).json({
-        message: error.message,
-      });
-    }
-    res.status(200).json({
-      message: "Get data user successfully",
-      data: result,
-    });
-  });
-};
-
 const register = async (req, res) => {
   const { name, email, password, division } = req.body;
   const hashPassword = await authUtils.setPassword(password);
@@ -69,8 +54,4 @@ const login = (req, res) => {
   });
 };
 
-const logout = (req, res) => {
-  res.header("auth-token", null);
-};
-
-module.exports = { getUser, login, register, logout };
+module.exports = { login, register };

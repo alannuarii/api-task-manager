@@ -21,7 +21,7 @@ const response = new Response();
 const user = new Auth();
 
 // Get All User
-app.get("/user", (req, res) => {
+app.get("/user", (req, res) => {z
   const sql = `SELECT * FROM user`;
   db.query(sql, (error, result) => {
     if (error) {
