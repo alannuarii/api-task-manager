@@ -29,5 +29,5 @@ app.use("/", router);
 // Running Port
 app.listen(port, () => {
   // Command : npm run dev
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Example app listening on port http://localhost:${port}`);
 });
