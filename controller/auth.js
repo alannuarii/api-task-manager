@@ -37,14 +37,16 @@ const login = (req, res) => {
           name: result[0].name,
           email: result[0].email,
           division: result[0].division,
+          position: result[0].position,
+          task_code: result[0].task_code,
         },
         env.secretKey,
         { expiresIn: "1h" }
       );
       res.header("x-access-token", token);
-      console.log(res.header("x-access-token"));
       res.status(200).json({
         message: "Login successfully",
+        data: token,
       });
     } else {
       res.status(401).json({
